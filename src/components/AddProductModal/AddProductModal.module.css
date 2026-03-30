@@ -1,0 +1,242 @@
+/* Затемнение фона */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Модальное окно */
+.modal {
+  background: white;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease-out;
+  box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Заголовок модального окна */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e9ecef;
+  background: #FFFFFF;
+  border-radius: 16px 16px 0 0;
+}
+
+.header h2 {
+  font-family: 'Cairo', 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #202020;
+  margin: 0;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #999;
+  transition: all 0.2s;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.closeButton:hover {
+  color: #333;
+  background: #F5F5F5;
+}
+
+/* Форма */
+.form {
+  padding: 24px;
+}
+
+/* Группа полей */
+.inputGroup {
+  margin-bottom: 20px;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #EDEDED;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: #242EDB;
+  box-shadow: 0 0 0 3px rgba(36, 46, 219, 0.1);
+}
+
+.inputGroup input:hover:not(:focus) {
+  border-color: #C9C9C9;
+}
+
+/* Ошибки */
+.inputError {
+  border-color: #f44336 !important;
+}
+
+.inputError:focus {
+  border-color: #f44336 !important;
+  box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.1) !important;
+}
+
+.errorText {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #f44336;
+  margin-top: 6px;
+  display: block;
+}
+
+/* Кнопки */
+.buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 28px;
+}
+
+.cancelButton {
+  padding: 10px 20px;
+  border: 1.5px solid #EDEDED;
+  background: white;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #666;
+}
+
+.cancelButton:hover {
+  background: #F5F5F5;
+  border-color: #C9C9C9;
+}
+
+.submitButton {
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #242EDB 0%, #1a22b0 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.submitButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0px 4px 12px rgba(36, 46, 219, 0.3);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+/* Адаптивность */
+@media (max-width: 640px) {
+  .modal {
+    width: 95%;
+    max-width: 95%;
+  }
+  
+  .header {
+    padding: 16px 20px;
+  }
+  
+  .header h2 {
+    font-size: 18px;
+  }
+  
+  .form {
+    padding: 20px;
+  }
+  
+  .buttons {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  
+  .cancelButton,
+  .submitButton {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+/* Стили для скроллбара */
+.modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

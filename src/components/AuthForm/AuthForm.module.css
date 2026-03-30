@@ -1,0 +1,488 @@
+/* Основной контейнер - центрирование формы */
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F5F5F5;
+  padding: 20px;
+}
+
+/* Контейнер формы - точно по макету */
+.formWrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  gap: 32px;
+  
+  position: relative;
+  width: 527px;
+  background: #FFFFFF;
+  box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04);
+  border-radius: 40px;
+  
+  /* Адаптивность */
+  max-width: 100%;
+}
+
+/* Внутренний контейнер с градиентом */
+.formInner {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px;
+  gap: 32px;
+  
+  width: 100%;
+  background: linear-gradient(180deg, rgba(35, 35, 35, 0.03) 0%, rgba(35, 35, 35, 0) 50%);
+  border-radius: 34px;
+}
+
+/* Логотип */
+.logo {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  
+  width: 52px;
+  height: 52px;
+  
+  background: linear-gradient(360deg, rgba(35, 35, 35, 0) 50%, rgba(35, 35, 35, 0.06) 100%), #FFFFFF;
+  box-shadow: 0px 0px 0px 2px #FFFFFF, 0px 12px 8px rgba(0, 0, 0, 0.03);
+  border-radius: 100px;
+}
+
+.logo svg {
+  width: 35px;
+  height: 34px;
+}
+
+/* Текстовый блок */
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 12px;
+  
+  width: 100%;
+  max-width: 419px;
+}
+
+/* Заголовок "Авторизация" */
+.title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 110%;
+  text-align: center;
+  letter-spacing: -0.015em;
+  
+  color: #232323;
+  margin: 0;
+}
+
+/* Подзаголовок */
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  
+  color: #E0E0E0;
+  margin: 0;
+}
+
+/* Форма */
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 20px;
+  
+  width: 100%;
+  max-width: 399px;
+}
+
+/* Контейнер для полей ввода */
+.fieldsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  
+  width: 100%;
+}
+
+/* Группа полей */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 6px;
+  
+  width: 100%;
+}
+
+/* Лейбл */
+.inputGroup label {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: -0.015em;
+  
+  color: #232323;
+  margin: 0;
+}
+
+/* Контейнер инпута с иконкой */
+.inputWrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 14px 16px;
+  gap: 14px;
+  
+  width: 100%;
+  background: #FFFFFF;
+  border: 1.5px solid #EDEDED;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.inputWrapper:hover {
+  border-color: #367AFF;
+}
+
+.inputWrapper:focus-within {
+  border-color: #242EDB;
+  box-shadow: 0px 0px 0px 3px rgba(36, 46, 219, 0.1);
+}
+
+/* Поле ввода */
+.inputWrapper input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: -0.015em;
+  
+  color: #232323;
+}
+
+.inputWrapper input::placeholder {
+  color: #C9C9C9;
+}
+
+/* Стиль для ошибки */
+.inputError .inputWrapper {
+  border-color: #EF4444;
+}
+
+/* Текст ошибки */
+.errorText {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  line-height: 150%;
+  color: #EF4444;
+  margin-top: 4px;
+  padding-left: 4px;
+}
+
+/* Иконки в инпутах */
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* Чекбокс группа */
+.checkboxGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Скрываем стандартный чекбокс */
+.checkboxGroup input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Кастомный чекбокс */
+.customCheckbox {
+  width: 24px;
+  height: 24px;
+  background: #FFFFFF;
+  border: 2px solid #EDEDED;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.customCheckbox.checked {
+  background: #242EDB;
+  border-color: #242EDB;
+}
+
+.customCheckbox.checked::after {
+  content: "✓";
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.checkboxGroup:hover .customCheckbox {
+  border-color: #367AFF;
+}
+
+/* Лейбл чекбокса */
+.checkboxGroup label {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  
+  color: #9C9C9C;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Контейнер для кнопок */
+.actionsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  
+  width: 100%;
+}
+
+/* Кнопка входа */
+.submitButton {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 8px;
+  gap: 8px;
+  
+  width: 100%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.12) 100%), #242EDB;
+  border: 1px solid #367AFF;
+  box-shadow: 0px 8px 8px rgba(54, 122, 255, 0.03), inset 0px -2px 0px 1px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0px 12px 12px rgba(54, 122, 255, 0.15), inset 0px -2px 0px 1px rgba(0, 0, 0, 0.08);
+}
+
+.submitButton:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Разделитель "или" */
+.divider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  
+  width: 100%;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 0px;
+  border: 1px solid #EDEDED;
+}
+
+.dividerText {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  
+  color: #EBEBEB;
+  flex-shrink: 0;
+}
+
+/* Ссылка регистрации */
+.registerLink {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  
+  color: #6C6C6C;
+  margin-top: 8px;
+}
+
+.createLink {
+  color: #242EDB;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.createLink:hover {
+  color: #367AFF;
+  text-decoration: underline;
+}
+
+/* Общая ошибка (API) */
+.generalError {
+  padding: 12px 16px;
+  background: #FEF2F2;
+  border: 1px solid #FEE2E2;
+  border-radius: 12px;
+  
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  color: #EF4444;
+  width: 100%;
+  text-align: center;
+}
+
+/* Подсказка с тестовыми данными */
+.hint {
+  margin-top: 20px;
+  padding: 12px 16px;
+  background: #F9FAFB;
+  border-radius: 12px;
+  
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  line-height: 150%;
+  color: #6C6C6C;
+  text-align: center;
+  width: 100%;
+}
+
+.hint strong {
+  color: #242EDB;
+  font-weight: 600;
+}
+
+/* Адаптивность */
+@media (max-width: 640px) {
+  .formWrapper {
+    width: 100%;
+    padding: 6px;
+  }
+  
+  .formInner {
+    padding: 32px 24px;
+  }
+  
+  .title {
+    font-size: 32px;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+  }
+  
+  .inputGroup label,
+  .inputWrapper input {
+    font-size: 16px;
+  }
+  
+  .submitButton {
+    font-size: 16px;
+    padding: 14px 8px;
+  }
+  
+  .registerLink {
+    font-size: 16px;
+  }
+}
+
+/* Анимация загрузки */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.submitButton:disabled {
+  position: relative;
+}
+
+.submitButton:disabled::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  vertical-align: middle;
+}
+
