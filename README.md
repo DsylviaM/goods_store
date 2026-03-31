@@ -3,7 +3,7 @@
 Приложение для управления товарами: загрузка списка, сортировка, добавление и редактирование.
 
 ## 🚀 Демо
-https://lucent-kheer-132773.netlify.app
+https://natalia-test-mui.netlify.app
 
 ## 🛠️ Стек
 - React + TypeScript
